@@ -1,10 +1,11 @@
 /** Struct to define a stack; each entry can hold a pointer to anything.
  */
-struct stack {
-  void **stack_base; // Pointer to base of stack
-  void **next;  // Pointer to next free cell;
-  int max_cells; // Maximum number of entries in the stack
-  int cells_used; // Currently used number of cells
+struct stack
+{
+    void **stack_base; // Pointer to base of stack
+    void **next;  // Pointer to next free cell;
+    int max_cells; // Maximum number of entries in the stack
+    int cells_used; // Currently used number of cells
 };
 
 typedef struct stack Stack;
