@@ -1,11 +1,22 @@
+all: stacktest queuetest
+
+queuetest: queuetest.o queue.o
+	gcc -g queuetest.o queue.o -o queuetest
+
 stacktest: stacktest.o stack.o
 	gcc -g stacktest.o stack.o -o stacktest
 
 stack.o: stack.c stack.h
 	gcc -g -c stack.c
 
+queue.o: queue.c queue.h
+	gcc -g -c queue.c
+
 stacktest.o: stacktest.c stack.h
 	gcc -g -c stacktest.c
+
+queuetest.o: queuetest.c queue.h
+	gcc -g -c queuetest.c
 
 docs:
 	doxygen
@@ -14,4 +25,5 @@ docs:
 
 clean:
 	rm -f *.o
-	rm -f stacktest
+	rm -f stacktest 
+	rm -f queuetest
