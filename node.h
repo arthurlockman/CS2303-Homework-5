@@ -7,6 +7,9 @@
 
 typedef struct Tnode Tnode;
 
+/** 
+ * @brief A struct for holding a node of a tree.
+ */
 struct Tnode
 {
     char* data;
