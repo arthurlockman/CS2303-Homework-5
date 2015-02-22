@@ -2,6 +2,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * This program creates a node and adds data using the 
+ * add_tnode function, which keeps all data in the proper
+ * order. It then prints this in descending order. It 
+ * then creates a node with random data and random
+ * children, and prints that to verify the sort order.
+ */
 int main(void)
 {
     printf("Printing premade tree:\n");
