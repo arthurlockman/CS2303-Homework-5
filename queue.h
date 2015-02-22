@@ -2,6 +2,9 @@
 #define QUEUE_H
 #include <stdlib.h>
 
+/** 
+ * @brief Struct for holding a queue.
+ */
 typedef struct
 {
     size_t size; ///< Size of head
