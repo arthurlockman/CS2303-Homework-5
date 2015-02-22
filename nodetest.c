@@ -21,5 +21,9 @@ int main(void)
     for (i = 0; i < 20; i++)
         add_tnode(root2, make_random_string(10));
     print_tnode(root2);
+
+    printf("\nFreeing nodes...\n");
+    free_tnode(root);
+    free_tnode(root2);
 }
 

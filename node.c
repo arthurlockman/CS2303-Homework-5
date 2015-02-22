@@ -47,6 +47,19 @@ void print_tnode(Tnode *current_tnode)
     if (current_tnode->right != NULL) print_tnode(current_tnode->right);
 }
 
+/** 
+ * @brief Frees a node and all sub-nodes.
+ * 
+ * @param current_tnode The node to free.
+ */
+void free_tnode(Tnode *current_tnode)
+{
+    if (current_tnode->left != NULL) free_tnode(current_tnode->left);
+    if (current_tnode->right != NULL) free_tnode(current_tnode->right);
+    free(current_tnode->data);
+    free(current_tnode);
+}
+
 /*
  * @brief Gets a random string of specified length.
  * Returns a string that contains only the capital;
