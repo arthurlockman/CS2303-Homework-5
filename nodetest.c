@@ -1,6 +1,7 @@
 #include "node.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 /**
  * This program creates a node and adds data using the 
@@ -11,6 +12,7 @@
  */
 int main(void)
 {
+    srand(time(NULL));
     printf("Printing premade tree:\n");
     Tnode* root = add_tnode(NULL, "Mr. Frond"); 
     add_tnode(root, "Jimmy");
