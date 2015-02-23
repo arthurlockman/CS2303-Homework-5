@@ -34,7 +34,7 @@ Queue* create_queue(int max_cells)
 /**
  * @brief Deletes a queue, including the structure and the memory
  * for holding the queue entries, but not the entries themselves.
- * @param which_stack Pointer to Queue structure.
+ * @param which Pointer to Queue structure.
  */
 void delete_queue(Queue* which)
 {
