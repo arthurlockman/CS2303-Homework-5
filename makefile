@@ -1,4 +1,4 @@
-all: stacktest queuetest nodetest
+all: stacktest queuetest nodetest randomnodetest
 
 queuetest: queuetest.o queue.o
 	gcc -g queuetest.o queue.o -o queuetest
@@ -8,6 +8,9 @@ stacktest: stacktest.o stack.o
 
 nodetest: nodetest.o node.o
 	gcc -g nodetest.o node.o -o nodetest
+
+randomnodetest: randomnodetest.o node.o
+	gcc -g randomnodetest.o node.o -o randomnodetest
 
 stack.o: stack.c stack.h
 	gcc -g -c stack.c
@@ -23,6 +26,9 @@ stacktest.o: stacktest.c stack.h
 
 queuetest.o: queuetest.c queue.h
 	gcc -g -c queuetest.c
+
+randomnodetest.o: randomnodetest.c node.h
+	gcc -g -c randomnodetest.c
 
 nodetest.o: nodetest.c node.h
 	gcc -g -c nodetest.c

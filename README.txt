@@ -15,7 +15,7 @@ To clean previous builds, type this command into the terminal:
     make clean
 
 ##Programs
-This assignment contains 3 programs. Stacktest, queuetest, and nodetest. These are detailed below.
+This assignment contains 4 programs. Stacktest, queuetest, randomnodetest, and nodetest. These are detailed below.
 
 ###stacktest
 Stacktest demonstrates the performance of the stack system that was given to us as part of the homework assignment. It verifies that the push and pop order is correct and that the stack correctly handles overflow and underflow. Running this program produces output similar to what is shown below.
@@ -82,7 +82,7 @@ Queuetest demonstrates the performance of the queue system that we wrote as part
     New foo 4 dequeued in correct order.
 
 ###nodetest
-Nodetest verifies that the node insertion and sorting algorithm works properly. It creates a premade tree that sorts when inserting elements, and then prints it in descending order. It also creates a tree with random characters as the data points, which is also sorted on insertion, and prints that in descending order as well. Finally it frees all of the associated nodes. The output is randomized for the random tree, so the output will not look exactly as below but will be similar.
+Nodetest verifies that the node insertion and sorting algorithm works properly. It creates a premade tree that sorts when inserting elements, and then prints it in descending order. It then frees all of the associated nodes.
 
     user@system:~/CS2303-Homework-5$ ./nodetest
     Printing premade tree:
@@ -94,28 +94,33 @@ Nodetest verifies that the node insertion and sorting algorithm works properly. 
     Mr. Frond
     Tina
 
-    Printing random tree:
-    BBJYWLSOGI
-    BSQYTVJDNX
-    BXDFGFHOBH
-    CGZDYHQRZQ
-    COBLTYXDYZ
-    GDWICTUWQE
-    GIQBUSRFBH
-    GWWOVQKEJX
-    JHVOUYQGOJ
-    JTASZMJPUM
-    JVELFUPEED
-    KEYWTYOPDE
-    LAXEZPZLPC
-    PENGNZQEWC
-    QGTCYCLRJP
-    QMWMGGJAZU
-    TJOAKLILYG
-    TPKJJSQCIO
-    TZLOJUPFYW
-    XKYHPDRGJW
-    ZCDXJLJAGX
-
     Freeing nodes...
 
+###randomnodetest
+Randomnodetest verifies that the node insertion and sorting algorithm works properly. It creates a tree filled with random data and prints it to the command line, and the frees the created node. Note that the random tree is new each time the program is run, but the output should resemble the following:
+
+    user@system:~/CS2303-Homework-5$ ./randomnodetest
+    Printing random tree:
+    BXYKUMFJTY
+    DFSLWNKNXS
+    EBGENMEURP
+    FZPKPIOFRV
+    HHFSWMKCWJ
+    IQKKJBRVSI
+    JGHLFDZKBG
+    NOLWMTUCLM
+    NSIFFTJXMI
+    ORNUTBZRZQ
+    RTQTKDMGJP
+    RUYPIKIZCM
+    SIKFFTTPDP
+    SNYNFSEDKX
+    USLVQGBXVO
+    UTKZRTKRXI
+    VPLFGIKNUU
+    WDKGBHWSCN
+    XFMNOQUROG
+    YFDAGQHYBL
+    ZIZOHUCWMR
+
+    Freeing nodes...

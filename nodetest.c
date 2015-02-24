@@ -23,16 +23,8 @@ int main(void)
     add_tnode(root, "Tina");
 
     print_tnode(root);
-    
-    printf("\nPrinting random tree:\n");
-    Tnode* root2 = add_tnode(NULL, make_random_string(10));
-    int i;
-    for (i = 0; i < 20; i++)
-        add_tnode(root2, make_random_string(10));
-    print_tnode(root2);
 
     printf("\nFreeing nodes...\n");
     free_tnode(root);
-    free_tnode(root2);
 }
 
