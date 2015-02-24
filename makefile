@@ -43,3 +43,4 @@ clean:
 	rm -f stacktest 
 	rm -f queuetest
 	rm -f nodetest
+	rm -f randomnodetest
